@@ -1,0 +1,14 @@
+<!-- <h2>{{interview.title | uppercase}} details</h2>
+<div><span>id: </span>{{interview.id}}</div>
+<div><label>location: <input [(ngModel)]="interview.title" placeholder='name'/></label></div>
+<div><span>location: </span>{{interview.location}}</div>
+<div><span>description: </span>{{interview.description}}</div> -->
+
+<h2>Interviews</h2>
+<ul class="interview">
+  <li [class.selected]="interview === selectedInterview" *ngFor="let interview of interviews" (click)="onSelect(interview)">
+    <span class="bage">{{ interview.id }}</span> {{ interview.title }}
+  </li>
+</ul>
+
+<app-interview-detail [interview]="selectedInterview"></app-interview-detail>

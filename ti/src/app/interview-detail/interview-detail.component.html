@@ -1,0 +1,22 @@
+<div *ngIf="interview">
+  <h2>{{ interview.title | uppercase }} Details</h2>
+  <div><span>id: </span>{{ interview.id }}</div>
+  <div>
+    <label
+      >title:
+      <input [(ngModel)]="interview.title" placeholder="title" />
+    </label>
+  </div>
+  <div>
+    <label
+      >location:
+      <input [(ngModel)]="interview.location" placeholder="location" />
+    </label>
+  </div>
+  <div>
+    <label
+      >description:
+      <input [(ngModel)]="interview.description" placeholder="description" />
+    </label>
+  </div>
+</div>
